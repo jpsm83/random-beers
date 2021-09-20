@@ -12,8 +12,7 @@ export default class RandomBeer extends Component {
   }
 
   componentDidMount() {
-    this.beerService
-      .get()
+    this.beerService.get()
       .then((res) => {
         this.setState({
           beers: res.data,
@@ -23,9 +22,10 @@ export default class RandomBeer extends Component {
   }
 
   displayRandomBeer() {
-    const randomBeer = this.state.beers[Math.floor(Math.random() * this.state.beers.length)];
+    const randomBeer =
+      this.state.beers[Math.floor(Math.random() * this.state.beers.length)];
     return <BeerDetail {...randomBeer} />;
-}
+  }
 
   render = () => (
     <div>

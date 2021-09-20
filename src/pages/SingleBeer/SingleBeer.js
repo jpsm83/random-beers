@@ -13,13 +13,21 @@ export default class SingleBeer extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    this.beerService
-      .getOne(id)
+    this.beerService.getOne(id)
       .then((res) => {
         console.log(res.data);
         this.setState({
           beer: res.data,
         });
+      })
+      .catch((error) => console.error(error));
+  }
+
+  deleteBeer() {
+    const id = this.props.match.params.id;
+    this.beerService.deleteOne(id)
+      .then((res) => {
+        console.log('Beer deleted');
       })
       .catch((error) => console.error(error));
   }

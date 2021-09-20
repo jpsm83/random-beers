@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Search extends Component {
-  render() {
-    const { handleSearchBeer } = this.props;
+export default function Search({ handleSearchBeer }) {
     return (
       <div>
         <input
@@ -13,4 +11,3 @@ export default class Search extends Component {
       </div>
     );
   }
-}

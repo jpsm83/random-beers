@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import BeerItem from '../../components/BeerItem/BeerItem';
 import BeerService from '../../services/beers.service';
 import Search from '../../components/Search/Search';
-import { queryAllByDisplayValue } from '@testing-library/react';
 
 export default class BeersList extends Component {
   constructor(props) {
@@ -15,13 +14,10 @@ export default class BeersList extends Component {
   }
 
   componentDidMount() {
-    this.beerService
-      .get()
+    this.beerService.get()
       .then((res) => {
         console.log(res.data);
-        this.setState({
-          beers: res.data,
-        });
+        this.setState({ beers: res.data });
       })
       .catch((error) => console.error(error));
   }

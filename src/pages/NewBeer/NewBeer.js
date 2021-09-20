@@ -26,9 +26,7 @@ export default class NewBeer extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state)
-    this.beerService
-      .create(this.state)
+    this.beerService.create(this.state)
       .then(
         this.setState(
           {
@@ -63,7 +61,7 @@ export default class NewBeer extends Component {
         <h2>New Beer</h2>
 
         <form onSubmit={(e) => this.handleSubmit(e)}>
-          <label for="name">Name:</label>
+          <label>Name:</label>
           <input
             type="text"
             name="name"
@@ -71,7 +69,7 @@ export default class NewBeer extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label for="tagline">Tagline:</label>
+          <label>Tagline:</label>
           <input
             type="text"
             name="tagline"
@@ -79,7 +77,7 @@ export default class NewBeer extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label for="descritption">Description:</label>
+          <label>Description:</label>
           <input
             type="text"
             name="description"
@@ -87,7 +85,7 @@ export default class NewBeer extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label for="first-brewed">First brewed:</label>
+          <label>First brewed:</label>
           <input
             type="text"
             name="first_brewed"
@@ -95,7 +93,7 @@ export default class NewBeer extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label for="brewer-tips">Brewers tips:</label>
+          <label>Brewers tips:</label>
           <input
             type="text"
             name="brewers_tips"
@@ -103,7 +101,7 @@ export default class NewBeer extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label for="attenuation-level">Attenuation level:</label>
+          <label>Attenuation level:</label>
           <input
             type="number"
             name="attenuation_level"
@@ -111,7 +109,7 @@ export default class NewBeer extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label for="contributed-by">Contributed by:</label>
+          <label>Contributed by:</label>
           <input
             type="text"
             name="contributed_by"
