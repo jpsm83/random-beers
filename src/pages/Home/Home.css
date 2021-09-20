@@ -1,0 +1,21 @@
+.containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    flex-direction: column;
+}
+
+.homeImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 140px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+}
