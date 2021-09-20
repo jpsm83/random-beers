@@ -10,17 +10,16 @@ export default function BeerItem({
 }) {
   return (
     <div>
-      <div className="beer-img">
-        <Link to={`/beers/${_id}`}>
+      <Link to={`/beers/${_id}`}>
+        <div className="beer-img">
           <img src={image_url} alt={name} />
-        </Link>
-      </div>
-
-      <div className="beer-detail">
-        <h2>{name}</h2>
-        <h3>{tagline}</h3>
-        <p>{contributed_by}</p>
-      </div>
+        </div>
+        <div className="beer-detail">
+          <h2>{name}</h2>
+          <h3>{tagline}</h3>
+          <p>{contributed_by}</p>
+        </div>
+      </Link>
     </div>
   );
 }
